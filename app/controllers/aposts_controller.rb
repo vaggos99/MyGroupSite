@@ -6,12 +6,15 @@ class ApostsController < ApplicationController
   def index
     @categories = Category.all
 
+     @aposts = Apost.all
      cate = params[:cate]
      if !cate.nil?
-      @aposts = Apost.where(:category_id =>cate)
-    else
-       @aposts = Apost.all
-  end
+      @aposts = @aposts.where(:category_id =>cate)
+        end
+        if !params[:search].blank?
+          @aposts=@aposts.where("title LIKE ? OR text LIKE ?","%"+params[:search]+"%","%"+params[:search]+"%")
+end
+
 end
 
   # GET /aposts/1
@@ -76,6 +79,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def apost_params
-      params.require(:apost).permit(:title, :text, :category_id,:user_id)
+      params.require(:apost).permit(:title, :text, :category_id,:user_id,:search)
     end
 end
