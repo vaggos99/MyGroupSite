@@ -1,0 +1,38 @@
+<%= form_with(model: apost, local: true) do |form| %>
+  <% if apost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apost.errors.count, "error") %> prohibited this apost from being saved:</h2>
+
+      <ul>
+      <% apost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :apost_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_field :text, id: :apost_text %>
+  </div>
+
+   <div class="field">
+     <%= form.label :category %>
+    <%= form.select :category_id,Category.all.map{|c| [c.category,c.id]} %>
+  </div>
+
+  <div class="field form group">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :apost_user_id ,value: current_user.id,type: :hidden%>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

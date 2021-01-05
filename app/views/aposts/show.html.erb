@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @apost.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @apost.text %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @apost.category.category %>
+</p>
+
+<p>
+  <strong>User:</strong>
+
+   <%= @apost.user.name %>
+</p>
+
+<%= link_to 'Edit', edit_apost_path(@apost) %> |
+<%= link_to 'Back', aposts_path %>
