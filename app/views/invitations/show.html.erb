@@ -1,0 +1,21 @@
+
+<h1>Your Friend Requests</h1>
+
+
+<div class="col-md-10">
+<% if @invitation.nil? %>
+<h4>No friend requests<h4>
+<%else%>
+    <% @invitation.each do |inv| %>
+ <div class="card" style="width: 18rem;">
+    <div class="card-header"><h3><%= inv.user.name %></h3></div>
+    <%= form_for inv do |f| %>
+  <%= f.number_field :id ,value: inv.id,type: :hidden %><br>
+      <%= f.submit "accept" %>
+
+<% end %>
+</div>
+</div>
+<%end%>
+
+<% end %>

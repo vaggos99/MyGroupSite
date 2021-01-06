@@ -4,7 +4,7 @@
 <h2>My Posts</h2>
 
   <div class="col-md-10">
-<% if @aposts.nil? %>
+<% if @aposts.empty? %>
 <h4>No posts<h4>
   <%else%>
     <% @aposts.each do |apost| %>
@@ -13,7 +13,7 @@
         <div class="card-header"><h3><%= apost.title %></h3></div>
   <div class="card-body">
     <p class="card-text"><h4><%= apost.text %></h4>
-    <%= link_to 'Show', apost %>
+    <%= link_to 'Show', "/link/to/resource", method: :put %>
 
 
   </div>
