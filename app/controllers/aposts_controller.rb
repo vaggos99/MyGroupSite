@@ -15,6 +15,11 @@ class ApostsController < ApplicationController
           @aposts=@aposts.where("title LIKE ? OR text LIKE ?","%"+params[:search]+"%","%"+params[:search]+"%")
 end
 
+  def myposts
+  @aposts = Apost.where(:user_id => current_user.id)
+
+  end
+
 end
 
   # GET /aposts/1

@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20210104162723) do
   create_table "aposts", force: :cascade do |t|
     t.string "title"
     t.string "text"
-    t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
