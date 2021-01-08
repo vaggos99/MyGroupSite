@@ -1,0 +1,34 @@
+
+<h1>Your Friend Requests</h1>
+
+
+<div class="col-md-10">
+<% if @invitation.nil? %>
+<h4>No friend requests<h4>
+<%else%>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <% current_user.pending_invitations.each do |inv| %>
+    <tr>
+ <td><%= inv.user.name %></td>
+
+   <td> <%= form_for [@user, inv] do |f| %>
+  <%=  hidden_field_tag :id ,params[:id],value: inv.id,type: :hidden %>
+  <%= f.submit "accept" ,class: 'btn btn-success'%>
+<% end %></td>
+<td><%= link_to 'reject', [current_user, inv],method: :delete %></td>
+      </tr>
+<% end %>
+
+</tbody>
+</table>
+<%end%>
+
+</div>

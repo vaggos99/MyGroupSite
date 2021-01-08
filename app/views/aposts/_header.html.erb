@@ -34,15 +34,15 @@
             <%= link_to "My posts",myposts_path,class:"nav-link" %></li>
             <li>
 
-              <%= link_to "My friends",requests_path,class:"nav-link" %></li>
+              <%= link_to "My friends",my_friends_path,class:"nav-link" %></li>
             <li>
 
-              <%= link_to "Add friend",new_invitation_path,class:"nav-link" %></li>
+              <%= link_to "Add friend",users_path,class:"nav-link" %></li>
 
 
       <li>
 
-        <%= link_to "Friend request",requests_path,class:"nav-link" %></li>
+        <%= link_to "Friend request",my_invitations_path,class:"nav-link" %></li>
 
 </ul>
       <%= form_tag aposts_path, method: :get,  class:"navbar-form navbar-left" do=%>
