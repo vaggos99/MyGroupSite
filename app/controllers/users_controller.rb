@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+
+  def my_friends
+
+    @users=User.friends(current_user.id)
+  end
+
+
   def index
    @users = User.all
    if !params[:search].blank?
@@ -6,14 +13,11 @@ class UsersController < ApplicationController
 end
 end
 
-def my_friends
 
-  @user=User.friends(current_user.id)
-end
  private
 
  def user_params
-    params.require(:user).permit(:name,:id,:email,:password,:searchuser)
+    params.require(:user).permit(:id,:name,:id,:email,:password,:searchuser)
   end
 
 end

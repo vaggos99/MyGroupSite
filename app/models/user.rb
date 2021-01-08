@@ -7,10 +7,8 @@ has_many :aposts
 has_many :invitations
   has_many :pending_invitations, -> { where confirmed: "false" }, class_name: 'Invitation', foreign_key: "friend_id"
   def self.friends(id)
-     friends_i_sent_invitation = Invitation.where(user_id: id, confirmed: "t").pluck(:friend_id)
-     friends_i_got_invitation = Invitation.where(friend_id: id, confirmed:"t").pluck(:user_id)
-     ids = friends_i_sent_invitation + friends_i_got_invitation
-     User.where(id: ids)
+     where("id=(?) OR id=(?)", Invitation.where("user_id =? AND confirmed ='t'",id).select(:friend_id),
+     Invitation.where("friend_id =? AND confirmed ='t'",id).select(:user_id))
    end
 
    def friend_with?(id1,id2)

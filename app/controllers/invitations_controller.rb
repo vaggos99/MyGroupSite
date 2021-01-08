@@ -8,7 +8,7 @@ end
     redirect_to users_path
   end
 def my_invitations
-    @invitation=Invitation.notReacted(current_user.id)
+
 
 end
 def update
@@ -16,11 +16,7 @@ def update
 @invitation.update(confirmed: :true)
 redirect_to root_path
 end
-def show
-  @invitation = Invitation.find(params[:id])
-  @invitation.destroy
-  redirect_to root_path
-end
+
 def destroy
 @invitation = Invitation.find(params[:id])
 @invitation.destroy
