@@ -240,6 +240,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   nio4r (= 2.3.1)
+  omniauth (>= 1.0.0.pr2)
   omniauth-google-oauth2
   pg
   puma (~> 3.7)
