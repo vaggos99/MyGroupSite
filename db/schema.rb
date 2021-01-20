@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20210111014930) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "aposts", force: :cascade do |t|
     t.string "title"
     t.string "text"
@@ -29,7 +32,7 @@ ActiveRecord::Schema.define(version: 20210111014930) do
   end
 
   create_table "invitations", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.integer "friend_id"
     t.boolean "confirmed", default: false
     t.datetime "created_at", null: false
@@ -54,4 +57,5 @@ ActiveRecord::Schema.define(version: 20210111014930) do
     t.index ["uid"], name: "index_users_on_uid"
   end
 
+  add_foreign_key "invitations", "users"
 end

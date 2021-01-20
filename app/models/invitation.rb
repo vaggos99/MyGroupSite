@@ -4,7 +4,7 @@ class Invitation < ApplicationRecord
 
   def self.notReacted(id)
 
-where( "friend_id=? AND confirmed==?", id,"false")
+where( "friend_id=? AND confirmed==?", id,:false)
 
   end
 

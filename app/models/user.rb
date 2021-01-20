@@ -7,7 +7,7 @@ has_many :aposts
 has_many :invitations
 devise :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_many :pending_invitations, -> { where confirmed: "false" }, class_name: 'Invitation', foreign_key: "friend_id"
+  has_many :pending_invitations, -> { where confirmed: :false}, class_name: 'Invitation', foreign_key: "friend_id"
   def self.from_omniauth(access_token)
     data = access_token.info
     user = User.where(email: data['email']).first
@@ -23,7 +23,7 @@ devise :omniauthable, omniauth_providers: [:google_oauth2]
 end
   def self.friends(id)
      where("id=(?) OR id=(?)", Invitation.where("user_id =? AND confirmed ='t'",id).select(:friend_id),
-     Invitation.where("friend_id =? AND confirmed ='t'",id).select(:user_id))
+     Invitation.where("friend_id =? AND confirmed =?",id,:true).select(:user_id))
    end
 
    def friend_with?(id1,id2)
