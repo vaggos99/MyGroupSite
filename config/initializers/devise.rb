@@ -25,7 +25,7 @@ config.scoped_views = true
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
+config.secret_key = '7086329c52bb5241b51d303339fd75be6ce2cedbff8c154e59d2a2e5b22fcf4a046366db18fe96f07f8362012422357f3ba8ca0d96d1b566e0cc49fb90c97fb5'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
