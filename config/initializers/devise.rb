@@ -47,7 +47,7 @@ config.secret_key = '7086329c52bb5241b51d303339fd75be6ce2cedbff8c154e59d2a2e5b22
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
-  config.omniauth :google_oauth2, "981987987785-so37jq6rln9oj9p70nm854023viq3gsm.apps.googleusercontent.com", "Jh2mrkmdw2dvvz1xEHueV-r9", access_type: "online"
+config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], {}
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
