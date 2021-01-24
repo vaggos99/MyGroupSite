@@ -3,42 +3,47 @@
 <h2>All Posts</h2>
 
   <div class="col-md-10">
-
+    <div class="row ">
     <% @aposts.each do |apost| %>
 
+    <div class="col-lg-4 mb-4 ">
      <div class="card" style="width: 18rem;">
-        <div class="card-header"><h3><%= apost.title %></h3></div>
-  <div class="card-body">
-    <p class="card-text"><h4><%= apost.text %></h4></p>
-    <%= link_to 'Show', apost %>
-
-
-  </div>
+        <div class="card-header">
+          <h3><%= apost.title %></h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><h4><%= apost.text %></h4></p>
+          <%= link_to 'Show', apost %>
+        </div>
+</div>
 </div>
 
-<br><br>
 
     <% end %>
-  </div>
+      </div>
+    </div>
+
 
 
 
   <div class="col-md-2">
+    <div class="card-header"><h3>Categories</h3></div>
+      <% @categories.each do |category| %>
      <div class="card" style="width: 18rem;">
-      <div class="card-header"><h3>Categories</h3></div>
+
        <div class="card-body">
 
   <ul class="list-group">
-  <% @categories.each do |category| %>
+
   <li class="list-group-item d-flex justify-content-between align-items-center">
         <h4> <%= link_to category.category,aposts_path(:cate => category.id) %></h4>
-         <br>
-<span class="badge badge-primary badge-pill"><%= category.aposts.count %></span>
+
+<span class="badge badge-pill badge-info" ><%= category.aposts.count %></span>
 </li>
-           <% end %>
+
          </ul>
  </div>
 </div>
+ <% end %>
+ <br>
 </div>
-
-<br>
