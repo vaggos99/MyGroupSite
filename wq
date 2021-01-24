@@ -1,0 +1,137 @@
+[33mcommit 80d8497c611804e84d282bc9c935ec324c6a6da0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Sat Jan 23 23:57:15 2021 +0200
+
+    dsfs
+
+[33mcommit 40e173647dd180c0d9044d0a504707fb98c3c277[m[33m ([m[1;31mheroku/main[m[33m)[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 21 04:42:35 2021 +0200
+
+    heroku fix
+
+[33mcommit 7e332bd2ef9c5e70d3fb472d0bac740333ed0d9c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 21 01:19:51 2021 +0200
+
+    google heroku
+
+[33mcommit c96555f4b1d1cfcfd38059627f0a7f7398c8f0ca[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 21 00:30:55 2021 +0200
+
+    heroku success
+
+[33mcommit f56e6bc3364e78be71880508bc461f1ce69a18b4[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 21 00:21:09 2021 +0200
+
+    h
+
+[33mcommit 521e088baef1d2cde679dac1b253a1b0e6fec257[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 21 00:19:42 2021 +0200
+
+    devise fix
+
+[33mcommit c150e323ea42f4530235324b1de9d66fdebedede[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 21 00:14:13 2021 +0200
+
+    heroku fails
+
+[33mcommit a55c9b3eb47b77fa3ba71257a064dc56f203d208[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Wed Jan 20 23:56:32 2021 +0200
+
+    try to fix
+
+[33mcommit d59543a392506d7e264faed04b6307e10036e5d8[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Wed Jan 20 23:48:22 2021 +0200
+
+    heroku
+
+[33mcommit 1b694ddf8022bf9c37fa2d87c3bc1e126c5a33f2[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Wed Jan 20 23:37:34 2021 +0200
+
+    omiauth
+
+[33mcommit 38c52f94f01b8378e512214a17e29d414542c41a[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Wed Jan 20 21:44:25 2021 +0200
+
+    heroku change sqlite3 to pg
+
+[33mcommit 27cafc10adf495125a77d7f1fc9d2016354134a7[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Wed Jan 20 21:15:54 2021 +0200
+
+    fix log out
+
+[33mcommit 5734d46ef406c3b31cbfe688fbb7a7af8399df4c[m
+Author: DimitrisLamp <lampiriskonstantinos@yahoo.gr>
+Date:   Mon Jan 11 04:04:54 2021 +0200
+
+    google
+
+[33mcommit cd7435f9b3922d6476280de42ddcf00a7e5692e6[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Fri Jan 8 16:03:02 2021 +0200
+
+    show my friends
+
+[33mcommit 8be1bf8660f2f2dfa0a0e6bd75a312925ab6cad9[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Fri Jan 8 04:04:22 2021 +0200
+
+    fix friendship
+
+[33mcommit 7f5ea65dc67a0b1c9cba0e2210f8959aa5c27b30[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Thu Jan 7 01:44:21 2021 +0200
+
+    add friend and accept
+
+[33mcommit 62c1076da9c9faed169edd9eabf8429adec081bb[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Wed Jan 6 15:33:46 2021 +0200
+
+    my posts and edit fix
+
+[33mcommit f03e9e8badf782e0b827ce95bf870b995fec8840[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Tue Jan 5 18:57:22 2021 +0200
+
+    search engine
+
+[33mcommit 2ad7053ba51653516f35be7580a3c27271adba10[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Tue Jan 5 16:28:08 2021 +0200
+
+    change header and root
+
+[33mcommit cfe3bb6c1444211619606b47d8dd0c3fd1931359[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Tue Jan 5 13:49:59 2021 +0200
+
+    change title
+
+[33mcommit 9d718acafc94a1466a9828efffd10b5cdbeadf09[m
+Author: aggelos <aggelosarzou1999@gmail.com.com>
+Date:   Tue Jan 5 13:46:02 2021 +0200
+
+    change title
+
+[33mcommit 84652ddb30632c3fc85ea9655c401f8a6dda4449[m
+Author: Vaggelis Koronis <>
+Date:   Tue Jan 5 03:41:54 2021 +0200
+
+    change title at app.html
+
+[33mcommit 9ba87024825715b54807854bc695ba3c862b79fc[m
+Author: Vaggelis Koronis <korwnis718@gmail.com>
+Date:   Tue Jan 5 03:26:20 2021 +0200
+
+    create posts
