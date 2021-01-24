@@ -10,6 +10,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
     <%= csrf_meta_tags %>
 
 
@@ -29,7 +30,8 @@
 
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-
+<div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
