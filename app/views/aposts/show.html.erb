@@ -1,27 +1,29 @@
 <p id="notice"><%= notice %></p>
+<dl class="dl-horizontal">
 
-<p>
-  <strong>Title:</strong>
-  <%= @apost.title %>
-</p>
+<dt><strong>Title:</strong></dt>
+<dd>  <%= @apost.title %></dd>
 
-<p>
-  <strong>Text:</strong>
-  <%= @apost.text %>
-</p>
+<dt><strong>Text:</strong></dt>
+<dd> <%= @apost.text %></dd>
 
-<p>
-  <strong>Category:</strong>
-  <%= @apost.category.category %>
-</p>
+<dt><strong>Category:</strong></dt>
+<dd><%= @apost.category.category %></dd>
 
-<p>
-  <strong>User:</strong>
 
-   <%= @apost.user.name %>
-</p>
+<dt><strong>User:</strong></dt>
+<dd><%= @apost.user.name %></dd>
 
+</dl>
 <%if @apost.user_id==current_user.id%>
 <%= link_to 'Edit', edit_apost_path(@apost) %>
 <%end%>|
-<%= link_to 'Back', aposts_path %>
+<%= link_to 'Back', aposts_path %>|
+<%if @apost.user_id !=current_user.id && !@apost.user.sent_invitation?(@apost.user_id,current_user.id) %>
+    <%= form_with(model: [ @apost.user, @apost.user.invitations.build ], local: true) do |form| %>
+      <%= form.number_field :user_id,value: current_user.id,type: :hidden%>
+      <%= form.number_field :friend_id,value: @apost.user_id, type: :hidden%>
+      <%= form.submit "I am interested", class: 'btn btn-success' %>
+  <%end%>
+
+<%end%>
