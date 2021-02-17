@@ -6,6 +6,16 @@ Rails.application.routes.draw do
        resources :invitations
 
   end
+  namespace :private do
+    resources :conversations, only: [:create] do
+      member do
+        post :close
+      end
+    end
+    resources :messages, only: [:index, :create]
+  end
+
+
   resources :categories
   resources :aposts
 

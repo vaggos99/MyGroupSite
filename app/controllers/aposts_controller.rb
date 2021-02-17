@@ -27,6 +27,9 @@ end
   # GET /aposts/1
   # GET /aposts/1.json
   def show
+    if user_signed_in?
+      @message_has_been_sent = conversation_exist?
+end
   end
 
   # GET /aposts/new
@@ -88,4 +91,7 @@ end
     def apost_params
       params.require(:apost).permit(:title, :text, :category_id,:user_id,:search)
     end
+    def conversation_exist?
+  Private::Conversation.between_users(current_user.id, @apost.user_id).present?
+end
 end
