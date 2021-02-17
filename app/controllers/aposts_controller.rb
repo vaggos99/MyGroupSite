@@ -14,13 +14,15 @@ class ApostsController < ApplicationController
         if !params[:search].blank?
           @aposts=@aposts.where("title LIKE ? OR text LIKE ?","%"+params[:search]+"%","%"+params[:search]+"%")
 end
-
+end
   def myposts
   @aposts = Apost.where(:user_id => current_user.id)
 
   end
+  def user_posts
+  @aposts = Apost.where(:user_id => params[:user_id])
 
-end
+  end
 
   # GET /aposts/1
   # GET /aposts/1.json
