@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+before_action :all_ordered_conversations
   before_action :opened_conversations_windows
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
@@ -14,7 +14,11 @@ class ApplicationController < ActionController::Base
       @private_conversations_windows = []
     end
   end
-
+  def all_ordered_conversations
+    if user_signed_in?
+      @all_conversations = OrderConversationsService.new({user: current_user}).call
+    end
+  end
 
   protected
 
