@@ -9,3 +9,16 @@
             title: 'Close',
             remote: true,
             method: :post %>
+
+<% if !@recipient.sent_invitation?(current_user.id,@recipient.id) %>
+
+<%= form_with(model: [ @recipient, @recipient.invitations.build ], local: true) do
+|form| %>
+<%= form.number_field :user_id,value: current_user.id,type: :hidden%>
+<%= form.number_field :friend_id,value: @recipient.id,type: :hidden%>
+<%= form.submit "Add as friend", class: 'btn btn-link' %>
+<%end%>
+
+
+
+<%end%>
