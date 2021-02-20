@@ -16,10 +16,11 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "partials/*";
-@import "partials/aposts/*";
 // Variables
 @import "base/variables";
+@import "partials/*";
+@import "partials/aposts/*";
+
 
 // Partials - main css files
 @import "partials/layout/*";

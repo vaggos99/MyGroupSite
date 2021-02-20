@@ -9,7 +9,7 @@
             title: 'Close',
             remote: true,
             method: :post %>
-
+<%= render 'private/conversations/conversation/heading/create_group_conversation', conversation: conversation %>
 <% if !@recipient.sent_invitation?(current_user.id,@recipient.id) %>
 
 <%= form_with(model: [ @recipient, @recipient.invitations.build ], local: true) do

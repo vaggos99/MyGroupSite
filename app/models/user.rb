@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 has_many :aposts
 has_many :invitations
+has_many :group_messages, class_name: 'Group::Message'
+has_and_belongs_to_many :group_conversations, class_name: 'Group::Conversation'
 devise :omniauthable, omniauth_providers: [:google_oauth2]
 
   has_many :pending_invitations, -> { where confirmed: :false}, class_name: 'Invitation', foreign_key: "friend_id"
