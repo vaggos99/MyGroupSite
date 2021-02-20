@@ -11,28 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :apost_title %>
+    <%= form.text_field :title, id: :apost_title ,class: "form-control"%>
   </div>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :text %>
-    <%= form.text_field :text, id: :apost_text %>
+    <%= form.text_area(:text,
+                      rows: 3,
+                      class: 'form-control',
+                      placeholder: 'Write your post') %>
+
   </div>
 
-   <div class="field">
+  <div class="form-group">
      <%= form.label :category %>
     <%= form.select :category_id,Category.all.map{|c| [c.category,c.id]} %>
   </div>
 
-  <div class="field form group">
-    
+<div class="form-group">
+
     <%= form.number_field :user_id, id: :apost_user_id ,value: current_user.id,type: :hidden%>
   </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create" ,class: "btn btn-primary"%>
   </div>
 <% end %>
