@@ -13,7 +13,7 @@ module Private::ConversationsHelper
     end
   end
   def friends_except_recipient(recipient)
-    contacts = User.friends(current_user.id).where("id !=?",recipient.id)
+    contacts = User.friends(current_user.id).where("id!=?",recipient.id)
     # return all contacts, except the opposite user of the chat
 
   end

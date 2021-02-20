@@ -24,8 +24,10 @@ devise :omniauthable, omniauth_providers: [:google_oauth2]
     user
 end
   def self.friends(id)
-     where("id=(?) OR id=(?)", Invitation.where("user_id =? AND confirmed ='t'",id).select(:friend_id),
-     Invitation.where("friend_id =? AND confirmed =?",id,:true).select(:user_id))
+    friends_i_sent_invitation = Invitation.where(user_id: id, confirmed: true).pluck(:friend_id)
+  friends_i_got_invitation = Invitation.where(friend_id: id, confirmed: true).pluck(:user_id)
+  ids = friends_i_sent_invitation + friends_i_got_invitation
+  where(id: ids)
    end
 
    def friend_with?(id1,id2)
