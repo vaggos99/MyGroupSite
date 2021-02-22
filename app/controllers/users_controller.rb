@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def index
    @users = User.all
-   if !params[:search].blank?
+   if !params[:searchuser].blank?
        @users=@users.where("name LIKE ? ","%"+params[:searchuser]+"%")
 end
 end
