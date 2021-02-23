@@ -9,6 +9,7 @@ gem 'omniauth-google-oauth2'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'figaro'
 gem 'google-api-client'
+gem 'omniauth-rails_csrf_protection'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
 # Use sqlite3 as the database for Active Record

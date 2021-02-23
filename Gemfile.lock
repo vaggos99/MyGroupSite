@@ -151,6 +151,9 @@ GEM
     omniauth-oauth2 (1.7.0)
       oauth2 (~> 1.4)
       omniauth (~> 1.9)
+    omniauth-rails_csrf_protection (0.1.2)
+      actionpack (>= 4.2)
+      omniauth (>= 1.3.1)
     orm_adapter (0.5.0)
     pg (1.2.3-x86-mingw32)
     public_suffix (4.0.6)
@@ -256,6 +259,7 @@ DEPENDENCIES
   nio4r (= 2.3.1)
   omniauth (>= 1.0.0.pr2)
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   pg
   puma (~> 3.7)
   rails (~> 5.1.7)
